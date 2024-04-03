@@ -4,19 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Module17.Final.Accounts;
+using Module17.Final.Calculator.Calculator;
 
-namespace Module17.Final
+namespace Module17.Final.Calculator
 {
-    public static class Calculator
+    public static class InterestCalculator
     {
         // Метод для расчета процентной ставки
-        public static void CalculateInterest(Account account)
+        public static void CalculateInterest(Account account, IInterestCalculator calculator)
         {
-            //var interest = IAccountType.CalculateInterest(account.Balance);
-            //Console.WriteLine($"For your {account.Type.GetType().Name} interest is {interest}");
-
-            var perc = account.Type.CalculateInterest(account.Balance);
-
+            account.Interest = calculator.CalculateInterest(account.Balance);
         }
     }
 }

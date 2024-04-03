@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace Module17.Final.Accounts
 {
+
+    public enum AccountTypes { 
+        Common, 
+        Salary 
+    };
+
     public class Account
     {
         // тип учетной записи
-        public IAccountType Type { get; set; }
+        public AccountTypes Type { get; set; }
 
         // баланс учетной записи
         public double Balance { get; set; }
@@ -17,9 +23,6 @@ namespace Module17.Final.Accounts
         // процентная ставка
         public double Interest { get; set; }
 
-        public Account()
-        {
-            Type = new CommonAccount(); 
-        }
+        public Account() { }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Module17.Final.Accounts;
+using Module17.Final.Calculator;
+using Module17.Final.Calculator.Calculator;
 using System;
 
 namespace Module17.Final
@@ -10,9 +12,9 @@ namespace Module17.Final
             Console.WriteLine("Hello World!");
 
             Account acc = new Account();
-            acc.Type = new CommonAccount();
+            acc.Type = AccountTypes.Common;
             acc.Balance = 1000.0;
-            Calculator.CalculateInterest(acc);
+            InterestCalculator.CalculateInterest(acc, new SalaryAccountInterestCalculator());
         }
     }
 }
