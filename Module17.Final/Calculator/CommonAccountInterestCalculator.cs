@@ -9,17 +9,21 @@ namespace Module17.Final.Calculator.Calculator
 {
     public class CommonAccountInterestCalculator : IInterestCalculator
     {
-        public double CalculateInterest(double balance)
+        public double CalculateInterest(Account acc)
         {
+            if (acc.Type != AccountTypes.Common)
+            {
+                throw new ArgumentException("Недопустимый тип аккаунта");
+            }
 
             // расчет процентной ставки обычного аккаунта по правилам банка
-            double interest = balance * 0.4;
+            double interest = acc.Balance * 0.4;
 
-            if (balance  < 1000)
-                interest -= balance * 0.2;
+            if (acc.Balance  < 1000)
+                interest -= acc.Balance * 0.2;
 
-            if (balance >= 1000)
-                interest -= balance * 0.1;
+            if (acc.Balance >= 1000)
+                interest -= acc.Balance * 0.1;
 
             return interest;
         }

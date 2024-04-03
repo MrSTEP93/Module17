@@ -13,7 +13,7 @@ namespace Module17.Final.Calculator
         // Метод для расчета процентной ставки
         public static void CalculateInterest(Account account, IInterestCalculator calculator)
         {
-            account.Interest = calculator.CalculateInterest(account.Balance);
+            account.Interest = calculator.CalculateInterest(account);
         }
     }
 }

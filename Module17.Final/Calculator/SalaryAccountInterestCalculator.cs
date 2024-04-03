@@ -9,10 +9,15 @@ namespace Module17.Final.Calculator.Calculator
 {
     public class SalaryAccountInterestCalculator : IInterestCalculator
     {
-        public double CalculateInterest(double balance)
+        public double CalculateInterest(Account acc)
         {
+            if (acc.Type != AccountTypes.Salary)
+            {
+                throw new ArgumentException("Недопустимый тип аккаунта");
+            }
+
             // расчет процентной ставки зарплатного аккаунта по правилам банка
-            double interest = balance * 0.5;
+            double interest = acc.Balance * 0.5;
 
             return interest;
         }

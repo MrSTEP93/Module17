@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module17.MessageEngine", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptersPrintAndPaint", "AdaptersPrintAndPaint\AdaptersPrintAndPaint.csproj", "{328B9B9F-9429-4550-A54A-588B05837365}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module17.Final", "Module17.Final\Module17.Final.csproj", "{FF3C1DAC-C5F8-4D36-8306-40BC8C133248}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module17.Final.Variant1", "Module17.Final\Module17.Final.Variant1.csproj", "{FF3C1DAC-C5F8-4D36-8306-40BC8C133248}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

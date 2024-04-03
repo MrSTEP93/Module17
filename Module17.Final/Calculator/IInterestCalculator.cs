@@ -9,6 +9,6 @@ namespace Module17.Final.Calculator.Calculator
 {
     public interface IInterestCalculator
     {
-        public double CalculateInterest(double balance);
+        public double CalculateInterest(Account acc);
     }
 }
